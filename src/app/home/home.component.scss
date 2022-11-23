@@ -1,0 +1,205 @@
+html{
+   padding: 0;
+   
+    box-sizing: border-box;
+}
+
+.nav {
+    border-bottom: 1px solid #424242;
+    width: 100%;
+
+
+
+}
+
+.content {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: auto;
+}
+@media screen and (max-width:667px) {
+    .content{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .search input{
+        width: 50%;
+    }
+    .search{
+        padding: 0 8px;
+    }
+}
+
+.link {
+    margin-left: 20px;
+}
+
+
+a {
+padding: 0 5px; 
+    text-decoration: none;
+    color: #667085;
+
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+
+    width: 40px;
+    height: 30px;
+    padding: 0 4px;
+}
+
+.search {
+    display: flex;
+    margin-right: 4px;
+    align-items: center;
+}
+
+.search i {
+    padding: 0 5px;
+    color: #56D9D9;
+}
+
+.search input {
+
+    box-sizing: border-box;
+    padding: 6px 25px;
+
+
+    background: #FFFFFF;
+    opacity: 0.5;
+    border: 0.5px solid #424242;
+
+}
+.shopping-cart{
+    padding: 0 10px;
+}
+
+.homePage {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 10px 10px;
+
+}
+
+.categories {
+    border: 0.5px solid #42424249;
+    width: 20%;
+    height: fit-content;
+    padding: 5px 6px;
+    border-radius: 8px;
+}
+@media screen and (max-width:667px) {
+    .categories{
+        width: 45%;
+    }
+}
+
+.allproducts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    @media screen and (max-width:667px) {
+        width: 55%;
+    }
+
+
+    .discount {
+        background-color: #56D9D9;
+        width: fit-content;
+        padding: 3px 6px;
+        border-radius: 4px;
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .discountprice {
+        margin-left: 10px;
+    }
+
+    .star {
+        color: #F4B000;
+        position: absolute;
+        bottom: 10%;
+        right: 3%;
+    }
+
+    .star i {
+        color: #F4B000;
+    }
+
+    .card {
+        border: 0.5px solid rgba(128, 128, 128, 0.397);
+        height: 600px;
+        width: 32%;
+        position: relative;
+        margin: 5px;
+        border-radius: 8px;
+
+    }
+    @media screen and (max-width:620px) {
+        .card {
+            width: 100%;
+            margin-left: 8px;
+            font-size: 10px;
+            height: 500px;
+        }
+
+        .card img {
+            width: 100%;
+          
+    
+        }
+       
+       
+}
+@media only screen and (min-width: 621px) and (max-width: 992px){
+    .card{
+        width: 45%;
+
+    }
+    .allproducts{
+        width: 60%;
+        justify-content: space-evenly;
+    }
+}
+
+    .card img {
+        width: 100%;
+        height: 258px;
+
+    }
+
+    button {
+        position: absolute;
+        bottom: 2%;
+        background-color: #56D9D9;
+        width: 95%;
+        border-radius: 4px;
+        padding: 8px 0;
+        border: none;
+        left: 2.5%;
+        cursor: pointer;
+    }
+
+    .card_body {
+        padding: 2px 6px;
+    }
+}
+

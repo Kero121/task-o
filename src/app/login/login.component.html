@@ -1,0 +1,53 @@
+<!-- nav bar -->
+<div class="nav">
+  <div class="content">
+    <div class="logo">
+      <img src="assets/Content(1).png" alt="">
+      <h5>clickTik</h5>
+      <div class="link">
+        <p> <a routerLink="home">Home</a></p>
+      </div>
+    </div>
+    <div>
+      <p> <a routerLink="login">login</a></p>
+    </div>
+
+  </div>
+</div>
+
+<!-- error message for wrong data -->
+<div *ngIf="error_messg" class="alert-danger">
+  <span>{{this.error_messg}}</span>
+</div>
+
+<!-- form -->
+<div class="form">
+  <img src="assets/Content(1).png" alt="">
+  <div class="form-data">
+
+
+    <div class="title">
+      <h2>Log in to your account</h2>
+      <p class="lead text-muted">welcome back! please enter your details</p>
+    </div>
+    <div class="inputs">
+      <form [formGroup]='loginForm' (ngSubmit)="loginSubmit(loginForm )">
+        <div class="login_input">
+          <label>username</label>
+
+          <input placeholder="Enter your email" class="form-control" formControlName="username" type="text">
+
+        </div>
+        <div class="login_input">
+          <label>password </label>
+          <input placeholder="*******" class="form-control" formControlName="password" type="password">
+
+        </div>
+        <button type="submit" class="button ">sign in
+
+        </button>
+      </form>
+    </div>
+
+  </div>
+</div>

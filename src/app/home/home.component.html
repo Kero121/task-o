@@ -1,0 +1,52 @@
+<div class="nav">
+    <div class="content">
+
+
+        <div class="logo">
+            <img src="assets/Content(1).png" alt="">
+            <h5>clickTik</h5>
+            <div class="link">
+                <p> <a routerLink="home">Home</a></p>
+            </div>
+
+        </div>
+
+        <div class="search">
+            <input (keyup)="searchTerm($event.target)" #searchInp placeholder="Search" type="text">
+            <div class="shopping-cart"><i class="fas fa-shopping-cart"></i></div>
+            <a routerLink="">Account</a>
+            <a routerLink="" (click)="logOut()">Logout</a>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="homePage">
+    <div class="categories">
+        <h2> Products</h2>
+        
+        <p ><input  (change)="getAllProducts()" name="cat" type="radio"> All </p>
+        <p *ngFor="let cat of getCategories"><input type="radio" name="cat"  (change)="filterCategory(cat, $event)"> {{cat}} </p>
+    </div>
+    <div class="allproducts">
+        <div *ngFor="let product of getProducts" class="card">
+            <img src="{{product.thumbnail}}" alt="">
+            <div class="discount">-{{product.discountPercentage}}%</div>
+            <div class="card_body">
+                <h4> {{product.title}}</h4>
+                <p>{{product.description}}</p>
+
+                <del><b>{{product.price}}</b> USD</del> <span
+                    class="discountprice"><b>{{product.price|calc:product.discountPercentage}}</b> USD</span>
+                <p> <span>Brand:{{product.brand}}</span> </p>
+                <p> <span>category:{{product.category}}</span> </p>
+                <p> <span>inStock:{{product.stock}}</span> </p>
+                <div class="star"><i class="fa-solid fa-star"></i>{{product.rating}}</div>
+
+            </div>
+            <button>Add to cart</button>
+
+        </div>
+    </div>
+</div>
